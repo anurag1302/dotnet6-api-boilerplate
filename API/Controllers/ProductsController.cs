@@ -26,6 +26,13 @@ namespace API.Controllers
             return Ok(await _productQueryService.GetProducts());
         }
 
+        [HttpGet]
+        [Route("/products/{id}")]
+        public async Task<IActionResult> GetProductById(int id)
+        {
+            return Ok(await _productQueryService.GetProductById(id));
+        }
+
         [HttpPost]
         [Route("/createproduct")]
         public IActionResult CreateProduct(Product product)
