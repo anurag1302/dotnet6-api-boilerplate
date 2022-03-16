@@ -1,4 +1,4 @@
-﻿namespace Core.Entities
+﻿namespace API.Core.Entities
 {
     public class ProductType: BaseEntity
     {

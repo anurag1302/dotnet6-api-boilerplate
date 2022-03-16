@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿using API.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Infrastructure.DataContext

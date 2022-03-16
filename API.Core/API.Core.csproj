@@ -7,9 +7,6 @@
 
   <ItemGroup>
     <Folder Include="ApiModels\" />
-    <Folder Include="Interfaces\Commands\" />
-    <Folder Include="Interfaces\Generic\" />
-    <Folder Include="Interfaces\Queries\" />
   </ItemGroup>
 
 </Project>

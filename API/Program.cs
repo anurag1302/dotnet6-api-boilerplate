@@ -1,4 +1,8 @@
+using API.Core.Interfaces.Commands;
+using API.Core.Interfaces.Queries.Products;
 using API.Infrastructure.DataContext;
+using API.Infrastructure.Implementations.Commands.Products;
+using API.Infrastructure.Implementations.Queries.Products;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +27,9 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 {
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<IProductQueryService, ProductQueryService>();
+builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
 
 var app = builder.Build();
 
